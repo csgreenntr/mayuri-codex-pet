@@ -1,4 +1,31 @@
-# 真由理 · Q版 Codex 宠物
+# 真由理 · Q 版宠物（Codex / DSH）
+
+嘟嘟噜～《命运石之门》椎名真由理，现在有 Codex 图集版和 DSH 立体 Q 版两种可下载版本。
+
+| 使用平台 | 版本与下载 | 安装说明 |
+| --- | --- | --- |
+| DeepSeek Harness（DSH） | [立体 Q 版 v1.0.0 · 24 个动作](https://github.com/csgreenntr/mayuri-codex-pet/releases/download/dsh-v1.0.0/mayuri-dsh-3d-v1.0.0.zip) | [DSH 安装与触发方式](DSH-README.md) |
+| Codex | [Q 版 v6 安装包](mayushii-chibi-v6.zip?raw=true) | [下方 Codex 安装说明](#codex-版) |
+
+## DSH 立体 Q 版 · 24 个动作
+
+黑色短发、蓝眼睛、浅蓝连衣裙，透明背景。单击随机挥手、蹲跳、比心或害羞；任务进行时托腮思考，完成时庆祝；右键菜单可点播全部 24 个动作。需要先安装 [dsh-pet](https://github.com/PC2005-cloud/dsh-pet)。
+
+| 挥手 | 蹲起跳跃 | 托腮思考 | 双手比心 |
+| :---: | :---: | :---: | :---: |
+| ![挥手](dsh-wave.gif) | ![蹲起跳跃](dsh-jump.gif) | ![托腮思考](dsh-thinking.gif) | ![双手比心](dsh-heart.gif) |
+
+[下载完整安装包（约 45 MiB）](https://github.com/csgreenntr/mayuri-codex-pet/releases/download/dsh-v1.0.0/mayuri-dsh-3d-v1.0.0.zip) · [下载插件 TGZ](https://github.com/csgreenntr/mayuri-codex-pet/releases/download/dsh-v1.0.0/dsh-mayuri-pet-1.0.0.tgz) · [查看版本发布页](https://github.com/csgreenntr/mayuri-codex-pet/releases/tag/dsh-v1.0.0)
+
+解压完整安装包后，先装 `dsh-pet`，再双击 `安装到DSH.cmd`，重开 DSH。也可在插件管理中输入 TGZ 的本地 `file:` 路径。[详细说明与兼容版本](DSH-README.md)。
+
+本版为 **3D 渲染风格的二维动画**：24 fps 透明 WebM，包含全部插件代码和素材，无需构建。不包含实时三维模型。普通动画和任务状态联动无需视频平台订阅；手动对话使用你在 DSH 中配置的模型额度。复杂关节与遮挡处可能存在轻微插值变形。
+
+![24 个动作总览](dsh-24-actions.png)
+
+[实际运行截图](dsh-live.jpg) · [验证摘要](dsh-validation.json) · [角色与素材说明](DSH-NOTICE.md)
+
+## Codex 版
 
 《命运石之门》椎名真由理的可爱 Q 版宠物：短黑发、蓝色大眼睛、浅蓝连衣裙。保留蹲起跳跃，任务完成且有未读结果时挥手。
 

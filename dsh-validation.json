@@ -1,0 +1,29 @@
+{
+  "version": "1.0.0",
+  "actions": 24,
+  "generated_keyframes": 288,
+  "encoded_frames": 1816,
+  "canvas": [
+    640,
+    360
+  ],
+  "fps": 24,
+  "thinking_cycle_seconds": 6.667,
+  "all_media_alpha_verified": true,
+  "installed_core": "0.2.1-rc.2",
+  "pet_engine": "0.3.7",
+  "video_service_used": false,
+  "additional_video_subscription": false,
+  "image_tool": "built-in image_gen",
+  "interpolation": "OpenCV DIS optical flow",
+  "verified": [
+    "all 24 media HTTP routes match the packaged files",
+    "all 24 actions appear in DSH context menu",
+    "thinking/working/waiting/success/error/idle host state transitions",
+    "thinking and waiting live browser rendering",
+    "tool/result state reducer",
+    "config and locally-edited media preservation",
+    "installed Desktop profile and 24 file hashes match"
+  ],
+  "package_sha256": "e386e9d76cc145266e619d3579646bd315cafa5aa7934636cfe569511e41788a"
+}
