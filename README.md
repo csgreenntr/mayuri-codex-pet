@@ -4,10 +4,13 @@
 
 | 使用平台 | 版本与下载 | 安装说明 |
 | --- | --- | --- |
-| DeepSeek Harness（DSH） | [立体 Q 版 v1.0.0 · 24 个动作](https://github.com/csgreenntr/mayuri-codex-pet/releases/download/dsh-v1.0.0/mayuri-dsh-3d-v1.0.0.zip) | [DSH 安装与触发方式](DSH-README.md) |
+| DeepSeek Harness（DSH） | [立体 Q 版 v1.0.1 · 24 个动作](https://github.com/csgreenntr/mayuri-codex-pet/releases/download/dsh-v1.0.1/mayuri-dsh-3d-v1.0.1.zip) | [DSH 安装与触发方式](DSH-README.md) |
 | Codex | [Q 版 v6 安装包](mayushii-chibi-v6.zip?raw=true) | [下方 Codex 安装说明](#codex-版) |
 
 ## DSH 立体 Q 版 · 24 个动作
+
+**v1.0.1 更新**：启用桌面“查看余额”；修复动画结束切换时的变淡闪烁；桌面做一个动作后自然站立 4～8 秒，再从 15 个日常动作中随机选下一个。[更新记录](DSH-CHANGELOG.md)。
+
 
 黑色短发、蓝眼睛、浅蓝连衣裙，透明背景。单击随机挥手、蹲跳、比心或害羞；任务进行时托腮思考，完成时庆祝；右键菜单可点播全部 24 个动作。需要先安装 [dsh-pet](https://github.com/PC2005-cloud/dsh-pet)。
 
@@ -15,7 +18,7 @@
 | :---: | :---: | :---: | :---: |
 | ![挥手](dsh-wave.gif) | ![蹲起跳跃](dsh-jump.gif) | ![托腮思考](dsh-thinking.gif) | ![双手比心](dsh-heart.gif) |
 
-[下载完整安装包（约 45 MiB）](https://github.com/csgreenntr/mayuri-codex-pet/releases/download/dsh-v1.0.0/mayuri-dsh-3d-v1.0.0.zip) · [下载插件 TGZ](https://github.com/csgreenntr/mayuri-codex-pet/releases/download/dsh-v1.0.0/dsh-mayuri-pet-1.0.0.tgz) · [查看版本发布页](https://github.com/csgreenntr/mayuri-codex-pet/releases/tag/dsh-v1.0.0)
+[下载完整安装包（约 45 MiB）](https://github.com/csgreenntr/mayuri-codex-pet/releases/download/dsh-v1.0.1/mayuri-dsh-3d-v1.0.1.zip) · [下载插件 TGZ](https://github.com/csgreenntr/mayuri-codex-pet/releases/download/dsh-v1.0.1/dsh-mayuri-pet-1.0.1.tgz) · [查看版本发布页](https://github.com/csgreenntr/mayuri-codex-pet/releases/tag/dsh-v1.0.1)
 
 解压完整安装包后，先装 `dsh-pet`，再双击 `安装到DSH.cmd`，重开 DSH。也可在插件管理中输入 TGZ 的本地 `file:` 路径。[详细说明与兼容版本](DSH-README.md)。
 

@@ -7,3 +7,5 @@
 本扩展通过 dsh-pet 的 pet-pack 接口工作，未复制或修改 dsh-pet 的程序代码。dsh-pet 由 PC2005-cloud 等贡献者维护：https://github.com/PC2005-cloud/dsh-pet （MIT）。需另行安装。
 
 此分发包未指定开放源代码或角色素材的再授权许可。
+
+桌面适配器由本项目编写，仅为 dsh-pet 0.3.7 的真由理实例替换视频交接策略；不随包分发 dsh-pet 的程序文件。安装时的 HTML 插入可移除，原始备份保留。

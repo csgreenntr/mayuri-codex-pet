@@ -1,29 +1,180 @@
 {
-  "version": "1.0.0",
+  "version": "1.0.1",
   "actions": 24,
-  "generated_keyframes": 288,
-  "encoded_frames": 1816,
-  "canvas": [
-    640,
-    360
+  "idle_random_actions": 15,
+  "balance_enabled": true,
+  "desktop_engine": "dsh-pet 0.3.7",
+  "neutral_endpoints": [
+    {
+      "name": "待机呼吸",
+      "frames": 122,
+      "exact_common_neutral_endpoints": true
+    },
+    {
+      "name": "挥手",
+      "frames": 64,
+      "exact_common_neutral_endpoints": true
+    },
+    {
+      "name": "蹲起跳跃",
+      "frames": 56,
+      "exact_common_neutral_endpoints": true
+    },
+    {
+      "name": "伸懒腰",
+      "frames": 92,
+      "exact_common_neutral_endpoints": true
+    },
+    {
+      "name": "揉眼睛",
+      "frames": 92,
+      "exact_common_neutral_endpoints": true
+    },
+    {
+      "name": "打哈欠",
+      "frames": 92,
+      "exact_common_neutral_endpoints": true
+    },
+    {
+      "name": "站着打瞌睡",
+      "frames": 92,
+      "exact_common_neutral_endpoints": true
+    },
+    {
+      "name": "歪头好奇",
+      "frames": 68,
+      "exact_common_neutral_endpoints": true
+    },
+    {
+      "name": "害羞捂脸",
+      "frames": 68,
+      "exact_common_neutral_endpoints": true
+    },
+    {
+      "name": "开心拍手",
+      "frames": 68,
+      "exact_common_neutral_endpoints": true
+    },
+    {
+      "name": "双手比心",
+      "frames": 68,
+      "exact_common_neutral_endpoints": true
+    },
+    {
+      "name": "轻轻摇摆",
+      "frames": 68,
+      "exact_common_neutral_endpoints": true
+    },
+    {
+      "name": "整理裙摆",
+      "frames": 68,
+      "exact_common_neutral_endpoints": true
+    },
+    {
+      "name": "鞠躬问好",
+      "frames": 68,
+      "exact_common_neutral_endpoints": true
+    },
+    {
+      "name": "抬头伸手",
+      "frames": 68,
+      "exact_common_neutral_endpoints": true
+    }
   ],
-  "fps": 24,
-  "thinking_cycle_seconds": 6.667,
-  "all_media_alpha_verified": true,
-  "installed_core": "0.2.1-rc.2",
-  "pet_engine": "0.3.7",
-  "video_service_used": false,
-  "additional_video_subscription": false,
-  "image_tool": "built-in image_gen",
-  "interpolation": "OpenCV DIS optical flow",
-  "verified": [
-    "all 24 media HTTP routes match the packaged files",
-    "all 24 actions appear in DSH context menu",
-    "thinking/working/waiting/success/error/idle host state transitions",
-    "thinking and waiting live browser rendering",
-    "tool/result state reducer",
-    "config and locally-edited media preservation",
-    "installed Desktop profile and 24 file hashes match"
+  "regression": [
+    "old default config migrates balance and random pool",
+    "size and position preserved",
+    "later explicit balance opt-out preserved",
+    "main config bytes preserved",
+    "actual dsh-pet merger accepts config",
+    "adapter idempotence and removal",
+    "unknown renderer versions rejected",
+    "actual desktop ended handler selects all 15 idle actions without immediate repetition",
+    "idle completion holds the neutral frame for 4-8 seconds",
+    "an interaction cancels the quiet timer immediately"
   ],
-  "package_sha256": "e386e9d76cc145266e619d3579646bd315cafa5aa7934636cfe569511e41788a"
+  "package_sha256": "9cafe7b213242874bb5faa31667157c502f63ae31bf8f4d058d62631c7aedca4",
+  "desktop_playback": {
+    "actions": [
+      "待机呼吸",
+      "整理裙摆",
+      "歪头好奇",
+      "挥手",
+      "歪头好奇",
+      "站着打瞌睡",
+      "打哈欠",
+      "鞠躬问好",
+      "害羞捂脸",
+      "揉眼睛",
+      "害羞捂脸",
+      "鞠躬问好",
+      "双手比心",
+      "蹲起跳跃",
+      "鞠躬问好",
+      "挥手",
+      "害羞捂脸",
+      "抬头伸手",
+      "站着打瞌睡",
+      "揉眼睛",
+      "站着打瞌睡",
+      "伸懒腰",
+      "双手比心",
+      "整理裙摆",
+      "打哈欠",
+      "双手比心",
+      "整理裙摆",
+      "双手比心",
+      "蹲起跳跃",
+      "整理裙摆",
+      "轻轻摇摆",
+      "揉眼睛",
+      "整理裙摆",
+      "伸懒腰",
+      "整理裙摆",
+      "双手比心",
+      "打哈欠",
+      "挥手",
+      "双手比心",
+      "待机呼吸",
+      "开心拍手",
+      "托腮思考",
+      "轻轻摇摆",
+      "待机呼吸",
+      "整理裙摆",
+      "蹲起跳跃"
+    ],
+    "handoffs": 46,
+    "samples": 16288,
+    "blankFrames": 0,
+    "dimFrames": 0,
+    "errors": [],
+    "current": "蹲起跳跃"
+  },
+  "paced_playback": {
+    "actions": [
+      "待机呼吸",
+      "揉眼睛",
+      "打哈欠",
+      "挥手",
+      "轻轻摇摆",
+      "蹲起跳跃",
+      "挥手",
+      "轻轻摇摆"
+    ],
+    "quietSeconds": [
+      7.33,
+      4.28,
+      7.05,
+      7.23,
+      4.82,
+      7.2,
+      4.44
+    ],
+    "handoffs": 8,
+    "samples": 5037,
+    "blankFrames": 0,
+    "dimFrames": 0,
+    "errors": [],
+    "current": "轻轻摇摆"
+  }
 }
