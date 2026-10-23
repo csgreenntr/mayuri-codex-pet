@@ -1,32 +1,35 @@
 # 真由理 · Q 版宠物（Codex / DSH）
 
-嘟嘟噜～《命运石之门》椎名真由理，现在有 Codex 图集版和 DSH 立体 Q 版两种可下载版本。
+嘟嘟噜～《命运石之门》椎名真由理，有 Codex 图集版和 DSH 独立立体 Q 版两种可下载版本。
 
 | 使用平台 | 版本与下载 | 安装说明 |
 | --- | --- | --- |
-| DeepSeek Harness（DSH） | [立体 Q 版 v1.0.1 · 24 个动作](https://github.com/csgreenntr/mayuri-codex-pet/releases/download/dsh-v1.0.1/mayuri-dsh-3d-v1.0.1.zip) | [DSH 安装与触发方式](DSH-README.md) |
+| DeepSeek Harness（DSH） | [独立版 v2.0.0 · 24 个动作](https://github.com/csgreenntr/mayuri-codex-pet/releases/download/dsh-v2.0.0/mayuri-dsh-independent-v2.0.0.zip) | [DSH 安装与触发方式](DSH-README.md) |
 | Codex | [Q 版 v6 安装包](mayushii-chibi-v6.zip?raw=true) | [下方 Codex 安装说明](#codex-版) |
 
-## DSH 立体 Q 版 · 24 个动作
+## DSH 独立版 · 24 个动作
 
-**v1.0.1 更新**：启用桌面“查看余额”；修复动画结束切换时的变淡闪烁；桌面做一个动作后自然站立 4～8 秒，再从 15 个日常动作中随机选下一个。[更新记录](DSH-CHANGELOG.md)。
+**v2.0.0 已自带桌面运行组件，无需安装或开启 dsh-pet。** 安装并开启 `dsh-mayuri-pet` 即可使用；原 `dsh-pet` 可以保持关闭。[更新记录](DSH-CHANGELOG.md)。
 
-
-黑色短发、蓝眼睛、浅蓝连衣裙，透明背景。单击随机挥手、蹲跳、比心或害羞；任务进行时托腮思考，完成时庆祝；右键菜单可点播全部 24 个动作。需要先安装 [dsh-pet](https://github.com/PC2005-cloud/dsh-pet)。
+黑色短发、蓝眼睛、浅蓝连衣裙，透明背景。保留 24 个动作、DSH 任务思考/等待/庆祝、右键动作菜单；桌面每做完一个待机动作，站定 4～8 秒再随机选下一个，点击和任务状态可立即打断停顿。
 
 | 挥手 | 蹲起跳跃 | 托腮思考 | 双手比心 |
 | :---: | :---: | :---: | :---: |
 | ![挥手](dsh-wave.gif) | ![蹲起跳跃](dsh-jump.gif) | ![托腮思考](dsh-thinking.gif) | ![双手比心](dsh-heart.gif) |
 
-[下载完整安装包（约 45 MiB）](https://github.com/csgreenntr/mayuri-codex-pet/releases/download/dsh-v1.0.1/mayuri-dsh-3d-v1.0.1.zip) · [下载插件 TGZ](https://github.com/csgreenntr/mayuri-codex-pet/releases/download/dsh-v1.0.1/dsh-mayuri-pet-1.0.1.tgz) · [查看版本发布页](https://github.com/csgreenntr/mayuri-codex-pet/releases/tag/dsh-v1.0.1)
+[下载完整安装包（约 43 MiB）](https://github.com/csgreenntr/mayuri-codex-pet/releases/download/dsh-v2.0.0/mayuri-dsh-independent-v2.0.0.zip) · [下载插件 TGZ](https://github.com/csgreenntr/mayuri-codex-pet/releases/download/dsh-v2.0.0/dsh-mayuri-pet-2.0.0.tgz) · [查看发行版](https://github.com/csgreenntr/mayuri-codex-pet/releases/tag/dsh-v2.0.0)
 
-解压完整安装包后，先装 `dsh-pet`，再双击 `安装到DSH.cmd`，重开 DSH。也可在插件管理中输入 TGZ 的本地 `file:` 路径。[详细说明与兼容版本](DSH-README.md)。
+解压 ZIP 后双击 `安装真由理独立版.cmd`，退出并重新打开 DSH，只开启真由理插件。也可在 DSH 插件页从本地文件安装 TGZ。首次缺少 Electron 时会下载运行时。[详细安装说明](DSH-README.md)。
 
-本版为 **3D 渲染风格的二维动画**：24 fps 透明 WebM，包含全部插件代码和素材，无需构建。不包含实时三维模型。普通动画和任务状态联动无需视频平台订阅；手动对话使用你在 DSH 中配置的模型额度。复杂关节与遮挡处可能存在轻微插值变形。
+旧版升级时迁移真由理的大小、位置和自定义动作设置，配置、桌面窗口缓存与原插件分开。已验证原 `dsh-pet` 关闭时，真由理可以显示、关闭再开启、随 DSH 重启恢复。
+
+余额查询保留原支持范围，`workbuddy-global` 暂不支持，未新增服务商接入。独立指无需依赖原插件，仍运行在 DSH 内；退出 DSH 后桌宠也会退出。
+
+本版为 **3D 渲染风格的二维动画**：24 fps 透明 WebM，TGZ 含完整插件代码和素材，无需构建；不含实时三维模型。普通动画无需视频平台订阅，对话使用 DSH 中配置的模型额度。复杂关节与遮挡处可能有轻微插值变形。
 
 ![24 个动作总览](dsh-24-actions.png)
 
-[实际运行截图](dsh-live.jpg) · [验证摘要](dsh-validation.json) · [角色与素材说明](DSH-NOTICE.md)
+[验证摘要](dsh-validation.json) · [角色与素材说明](DSH-NOTICE.md) · [第三方代码许可](DSH-THIRD-PARTY-LICENSES.md) · [旧版 v1.0.1](https://github.com/csgreenntr/mayuri-codex-pet/releases/tag/dsh-v1.0.1)
 
 ## Codex 版
 

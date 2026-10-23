@@ -1,83 +1,28 @@
-# 真由理 · 立体 Q 版 DSH 宠物
+# 嘟嘟噜～真由理独立桌宠 v2.0.0
 
-嘟嘟噜～黑色短发、蓝眼睛、浅蓝连衣裙的真由理，24 种透明动画，陪你使用 DeepSeek Harness。
+安装并开启 dsh-mayuri-pet 即可使用，无需安装或开启 dsh-pet。独立插件自带桌面窗口、播放、右键菜单和 DSH 任务状态联动。
 
-本包是 **dsh-pet 的宠物扩展插件**，需要先安装 `dsh-pet`，再安装本包。普通动画和任务状态联动无需视频平台账号或订阅。
-
-[下载完整安装包](https://github.com/csgreenntr/mayuri-codex-pet/releases/download/dsh-v1.0.1/mayuri-dsh-3d-v1.0.1.zip) · [单独下载插件 TGZ](https://github.com/csgreenntr/mayuri-codex-pet/releases/download/dsh-v1.0.1/dsh-mayuri-pet-1.0.1.tgz) · [文件校验值](https://github.com/csgreenntr/mayuri-codex-pet/releases/download/dsh-v1.0.1/SHA256SUMS-dsh-v1.0.1.txt)
-
-## v1.0.1 更新
-
-- 开启余额功能：桌面宠物右键 → 查看余额，使用 DSH 当前服务商的余额接口。服务商不支持或缺凭据时会显示具体原因，不会显示虚构余额。
-- 桌面待机每做完一个小动作，在自然站姿停顿 4～8 秒，再从 15 个日常动作中随机选下一个，避开当前动作；点击和工作状态立即响应。
-- 修复透明视频切换变淡/闪烁：保留旧画面，等待新视频首帧后直接交接；统一待机呼吸的首尾中立姿势。
-
-### 从 1.0.0 升级
-
-安装新的 TGZ 或双击更新包里的安装脚本后，重开 DSH。旧版默认的余额开关、待机池、权重会自动迁移；大小、位置和自定义动作池保留。升级后若手动关闭余额，后续重载不会强行打开。
-
-本版仅适配 **dsh-pet 0.3.7**。为修复桌面切换，会在其 `runtime/electron-helper/index.html` 的脚本列表增加一个 `mayuri-playback.js`，并保留原 HTML 备份；不改引擎原始 `sprite.js`，适配器只接管 `mayuri-3d`，其他宠物沿用原播放逻辑。停用时移除本适配器。检测到未知版本、不同的播放器代码或外部修改时拒绝覆盖。更新 dsh-pet 后需重新核验兼容性。
+[下载完整 ZIP](https://github.com/csgreenntr/mayuri-codex-pet/releases/download/dsh-v2.0.0/mayuri-dsh-independent-v2.0.0.zip) · [下载 TGZ](https://github.com/csgreenntr/mayuri-codex-pet/releases/download/dsh-v2.0.0/dsh-mayuri-pet-2.0.0.tgz) · [校验值](https://github.com/csgreenntr/mayuri-codex-pet/releases/download/dsh-v2.0.0/SHA256SUMS-dsh-v2.0.0.txt)
 
 ## 安装
 
-适配目标：Windows DSH Desktop `0.2.1-rc.2`，dsh-pet `0.3.7`。其他版本尚未实测。
+在 DSH 插件页从本地文件安装 dsh-mayuri-pet-2.0.0.tgz，启用真由理。原 dsh-pet 可以保持关闭。首次缺少 Electron 时会下载运行时。
 
-1. 先在 DSH 的插件管理中安装 `dsh-pet`。已安装可跳过。
-2. 将随分发包附带的 `dsh-mayuri-pet-1.0.1.tgz` 保存到固定位置。
-3. 在 DSH 插件管理的安装框输入 `file:C:/你的路径/dsh-mayuri-pet-1.0.1.tgz`。也可以双击分发包中的 `安装到DSH.cmd`，使用桌面版自带 CLI 安装。
-4. 关闭并重新打开 DSH。真由理默认出现在右下角，也会出现在 DSH 网页界面中。
+## 功能
 
-如果使用 DSH Web，命令为：
+- 24 个透明动画；15 个待机动作随机选择，动作结束站定 4～8 秒。
+- 左键打招呼，连续点击还有跳跃、比心等动作；右键手动选动作、查看余额、对话、重载；大小在 DSH 的真由理设置页调整。
+- 跟随 DSH 任务思考、工作、等待、完成。
+- 真由理配置、记忆、窗口缓存与原插件隔离，可同时使用两者。
 
-```powershell
-dsh plugin --profile web add ./dsh-mayuri-pet-1.0.1.tgz
-```
+## 升级与配置
 
-## 动作怎么触发
+首次启动从旧版真由理配置（包括停用配置）复制现有设置，保留大小、位置和自定义动作池。独立配置为 $DSH_HOME/dsh-mayuri-pet/main-config.jsonc；后续不会重新覆盖。旧版设置保留，已识别的旧形象配置从原引擎发现目录收回以防重复显示。原插件自己的主配置不会更改。
 
-| 操作或状态 | 动作 |
-| --- | --- |
-| 空闲 | 桌面做一个动作后自然站立 4～8 秒，再随机选择下一个，避免连续重复 |
-| 左键单击 | 随机挥手、蹲跳、比心或害羞 |
-| 拖拽 | 拖起时的小惊讶 |
-| 任务思考、工具执行、整理结果 | 安静托腮，约 6.7 秒一轮 |
-| 等待用户批准或选择 | 耐心等待 |
-| 任务完成 | 开心庆祝 |
-| 任务出错 | 失落叹气 |
-| 右键 → 动作 → 全部24个动作 | 任意点播全部动作 |
+独立命令：/mayuri、/mayuri-chat、/mayuri-balance。
 
-完整动作：待机呼吸、挥手、蹲起跳跃、托腮思考、耐心等待、完成庆祝、失落叹气、向左小跑、向右小跑、拖起惊讶、轻轻落地、伸懒腰、揉眼睛、打哈欠、站着打瞌睡、歪头好奇、害羞捂脸、开心拍手、双手比心、轻轻摇摆、整理裙摆、鞠躬问好、抬头伸手、左右张望。
+余额支持范围保持原状，workbuddy-global 暂不支持。
 
-默认固定在原地；如想自动移动，可手改该宠物配置中的 `fixedEnabled` 和动画权重。所有动作也可从右键菜单手动点播。DSH 的原生拖放/物理行为由 dsh-pet 管理，不承诺每次落地都会自动点播本包的“轻轻落地”；该动作可在菜单中点播。
+这是在 DSH 中独立启用的插件；关闭 DSH 后也会退出。角色和第三方代码说明见 NOTICE.md 和 THIRD-PARTY-LICENSES.md。
 
-## 调整大小和显示位置
-
-配置路径为 `$DSH_HOME/dsh-pet/pet/mayuri-3d-config.json`；默认 DSH_HOME 是 `~/.dsh`。
-
-- `pets[0].size` 默认 360，单位像素（透明画布宽度）。
-- `display`：`web` 仅界面内，`desktop` 仅桌面，`both` 两处都有，`none` 隐藏。
-- `position`：角落与水平、垂直边距。
-
-文件宠物配置请在上面的文件里修改，保存后从桌宠右键菜单重载或重启 DSH。主宠物配置和原有聊天、模型配置不会被本扩展覆盖。
-
-余额查询默认开启，桌面宠物右键 → 查看余额。查询与显示依赖当前服务商的接口和有效凭据；不是所有服务商都支持。自动碎碎念默认关闭。手动点击 dsh-pet 自带的“对话/碎碎念”仍会调用 DSH 中选择的模型，按该服务商的规则使用额度。
-
-## 停用与卸载
-
-在 DSH 插件管理中停用或卸载 `dsh-mayuri-pet`，重启 DSH。正常卸载生命周期会把本宠物配置保留在 `$DSH_HOME/dsh-mayuri-pet/inactive-config.json`，重新启用时恢复；保留的素材不会自动删除。
-
-如 DSH 曾异常退出，卸载后仍有本宠物，可在解压出来的插件文件夹中执行：
-
-```powershell
-node scripts/manage.mjs disable
-```
-
-该命令只停用本扩展拥有的真由理配置，保留你的修改，不改主宠物。重启 DSH 后生效。
-
-## 制作说明
-
-每个动作由内置生图工具生成 12 张关键帧，统一角色尺度与脚底位置后，进行帧间光流插值，编码成 640×360、24 fps 的透明 VP9 WebM。复杂关节与遮挡处仍可能有轻微插值变形。这是 **3D 渲染风格的逐帧二维动画**，不是实时三维模型。
-
-完整分发包附有预览、生成提示词和验证记录。本包无需构建即可安装。角色来源及非官方同人说明见 [素材说明](DSH-NOTICE.md)。
-
-运行接口依据：[dsh-pet](https://github.com/PC2005-cloud/dsh-pet)。
+已在 Windows DSH Desktop 0.2.1-rc.2 验证。其他版本尚未实测。完整代码与素材见发行版 TGZ。
